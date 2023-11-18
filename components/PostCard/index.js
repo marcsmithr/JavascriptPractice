@@ -9,6 +9,19 @@ function PostCard({post}) {
 
     if(!post||!user) return null
     return (
+        <>
+                <div className='post-card-container'>
+                        <div className='post-card-likes'>
+                            <PostLikes post={post}/>
+                        </div>
 
+                    <Link className='post-card-link' to={`/s/${post.community_name}/${post.id}/comments`}>
+                        <div className='post-card-main'>
+                            
+                        </div>
+                    </Link>
+                </div>
+        </>
     )
+}
 export default PostCard
